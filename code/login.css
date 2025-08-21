@@ -1,0 +1,161 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container chính */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Logo */
+.auth-logo img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* Tiêu đề */
+.auth-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form nhóm */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Wrapper cho trường mật khẩu */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* Chừa khoảng trống cho icon */
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.password-wrapper .toggle-password:hover {
+  color: #333;
+}
+
+/* Nút đăng nhập */
+.btn-auth {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #b92222;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-auth:hover {
+  background-color: #a51d1d;
+}
+
+/* Liên kết phụ */
+.auth-links {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-links a {
+  color: #b92222;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* Đăng nhập với mạng xã hội */
+.social-login {
+  margin-top: 20px;
+}
+
+.social-login p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.btn-social {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-social i {
+  margin-right: 10px;
+}
+
+.btn-social.google {
+  background-color: #db4437;
+}
+
+.btn-social.google:hover {
+  background-color: #c33d2f;
+}
+
+.btn-social.zalo {
+  background-color: #0084ff;
+}
+
+.btn-social.zalo:hover {
+  background-color: #0073e6;
+}
+
+@media (max-width: 450px) {
+  .auth-container {
+    padding: 1em;
+    max-width: 96vw;
+  }
+}

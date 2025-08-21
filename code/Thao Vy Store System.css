@@ -1,0 +1,51 @@
+/* Hệ thống cửa hàng */
+.stores {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.stores h1 {
+    font-size: 28px;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.stores p {
+    font-size: 16px;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.store-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.store-item {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 400px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 15px;
+    text-align: left;
+}
+
+.store-item h3 {
+    font-size: 20px;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.store-item p {
+    font-size: 14px;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.store-item iframe {
+    border-radius: var(--radius);
+}
