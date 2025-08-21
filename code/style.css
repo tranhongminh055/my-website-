@@ -453,3 +453,52 @@ footer {
 .suggestions-list li:hover {
     background: #f0f0f0;
 }
+
+/* Giỏ hàng ở góc trên bên phải */
+.cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--red);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cart-icon i {
+    font-size: 20px;
+}
+
+#cart-count {
+    background: #fff;
+    color: var(--red);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Hiệu ứng bay vào giỏ hàng */
+.fly-to-cart {
+    position: fixed;
+    z-index: 1000;
+    animation: fly-to-cart 1s ease-in-out forwards;
+}
+
+@keyframes fly-to-cart {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(100vw - 50px), -50px);
+        opacity: 0;
+    }
+}

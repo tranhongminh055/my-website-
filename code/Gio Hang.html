@@ -51,48 +51,14 @@
         <div class="cart-content">
             <!-- Danh sách sản phẩm -->
             <div class="cart-items">
-                <div class="cart-header">
-                    <div class="header-select">
-                        <input type="checkbox" id="select-all">
-                        <label for="select-all">All</label>
-                    </div>
-                    <div class="header-info">Sản phẩm</div>
-                    <div class="header-price">Giá</div>
-                    <div class="header-quantity"></div>
-                    <div class="header-total"></div>
-                    <div class="header-action"></div>
-                </div>
-                <div class="cart-item">
-                  
-                    <div class="item-select">
-                        <input type="checkbox" class="select-item">
-                    </div>
-                    <div class="item-image">
-                        <img src="/src/giay nam dep.jfif" alt="Sản phẩm 1">
-                    </div>
-                    <div class="item-info">
-                        <h3>Adidas UltraBoost</h3>
-                    </div>
-                    <div class="item-price"></div>
-                    <div class="quantity-control">
-                        <button class="decrease">-</button>
-                        <input type="number" value="1" min="1" class="item-quantity">
-                        <button class="increase">+</button>
-                    </div>
-                    <div class="item-total">2,500,000 VND
-                    </div>
-                    <div class="item-remove">
-                        <button class="remove-item"><i class="fas fa-trash"></i> Xóa</button>
-                    </div>
-                </div>
-                <!-- Thêm sản phẩm khác -->
+                <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
             </div>
 
             <!-- Thanh toán -->
             <div class="cart-summary">
                 <div class="summary-row">
                     <span>Tổng tiền:</span>
-                    <span id="subtotal">2,500,000 VND</span>
+                    <span id="subtotal">0 VND</span>
                 </div>
                 <div class="summary-row">
                     <span>Giảm giá:</span>
@@ -100,17 +66,17 @@
                 </div>
                 <div class="summary-row">
                     <span>Thành tiền:</span>
-                    <span id="total">2,500,000 VND</span>
+                    <span id="total">0 VND</span>
                 </div>
+
                 <!-- Mục nhập voucher -->
                 <div class="voucher">
-                    <input type="text" id="voucher-code" placeholder="Nhập mã voucher" readonly>
+                    <input type="text" id="voucher-code" placeholder="Nhập mã voucher">
+                    <button id="apply-voucher">Áp dụng</button>
                     <button id="toggle-voucher-list" class="toggle-voucher">
                         <i class="fas fa-chevron-down"></i>
                     </button>
                 </div>
-
-                
 
                 <!-- Danh sách voucher -->
                 <div id="voucher-list" class="voucher-list hidden">
@@ -126,7 +92,7 @@
                         <li>NEWYEAR - Chỉ áp dụng cho đơn hàng trên 5,000,000 VND</li>
                     </ul>
                 </div>
-                <button id="apply-voucher">Áp dụng</button>
+
                 <!-- Phương thức thanh toán -->
                 <div class="payment-method">
                     <h4>Phương thức thanh toán:</h4>
@@ -140,32 +106,6 @@
                         <input type="radio" name="payment-method" value="cash-on-delivery"> Thanh toán khi nhận hàng
                     </label>
                 </div>
-
-                <!-- Form liên kết ngân hàng/thẻ tín dụng -->
-                <div id="credit-card-form" class="hidden">
-                    <h4>Thông tin thẻ tín dụng</h4>
-                    <input type="text" id="card-number" placeholder="Số thẻ tín dụng">
-                    <input type="text" id="card-holder" placeholder="Tên chủ thẻ">
-                    <input type="text" id="expiry-date" placeholder="Ngày hết hạn (MM/YY)">
-                    <input type="text" id="cvv" placeholder="CVV">
-                </div>
-
-                <div id="bank-transfer-form" class="hidden">
-                    <h4>Thông tin chuyển khoản</h4>
-                    <select id="bank-list">
-                        <option value="">Chọn ngân hàng</option>
-                        <option value="vietcombank" data-logo="https://upload.wikimedia.org/wikipedia/commons/3/37/Vietcombank_logo.svg">Vietcombank</option>
-                        <option value="techcombank" data-logo="https://upload.wikimedia.org/wikipedia/commons/7/7c/Techcombank_logo.svg">Techcombank</option>
-                        <option value="vpbank" data-logo="https://upload.wikimedia.org/wikipedia/commons/9/9c/VPBank_logo.svg">VPBank</option>
-                        <option value="acb" data-logo="https://upload.wikimedia.org/wikipedia/commons/0/0e/ACB_logo.svg">ACB</option>
-                    </select>
-                    <div id="bank-logo-container" class="bank-logo-container hidden">
-                        <img id="bank-logo" src="" alt="Logo ngân hàng">
-                    </div>
-                    <input type="text" id="account-number" placeholder="Số tài khoản">
-                </div>
-
-                <button id="checkout">Mua hàng</button>
             </div>
         </div>
     </main>

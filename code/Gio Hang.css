@@ -626,8 +626,6 @@ footer {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     font-size: 14px;
-    background: #f9f9f9;
-    cursor: pointer;
 }
 
 .voucher button {
@@ -701,62 +699,4 @@ footer {
 
 .voucher-list ul li:last-child {
     border-bottom: none;
-}
-
-.payment-method {
-    margin: 20px 0;
-}
-
-.payment-method h4 {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: var(--dark);
-}
-
-.payment-method label {
-    font-size: 14px;
-    color: var(--gray);
-    cursor: pointer;
-}
-
-.payment-method input[type="radio"] {
-    margin-right: 10px;
-}
-
-#credit-card-form,
-#bank-transfer-form {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: #fff;
-    box-shadow: var(--shadow);
-}
-
-#credit-card-form input,
-#bank-transfer-form input,
-#bank-transfer-form select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    font-size: 14px;
-}
-
-.hidden {
-    display: none;
-}
-
-.bank-logo-container {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.bank-logo-container img {
-    max-width: 150px;
-    height: auto;
-    display: inline-block;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
 }
