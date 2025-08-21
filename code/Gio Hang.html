@@ -2,62 +2,35 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giỏ hàng - Thảo Vy Store</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Gio Hang.css">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="header-top">
-            <div class="container flex-between">
-                <div class="logo">
-                    <a href="#"><img src="/src/Brown Beige Retro Shoe Store Logo.png" alt="Logo"></a>
-                </div>
-                <div class="header-search">
-                    <input type="text" id="search-input" placeholder="Bạn muốn tìm gì?">
-                    <button><i class="fas fa-search"></i></button>
-                    <ul id="search-suggestions" class="suggestions-list"></ul>
-                </div>
-                <div class="header-hotline">
-                    <i class="fas fa-phone-volume"></i> <span>Hotline: 1800 2097</span>
-                </div>
-                <div class="header-account">
-                    <a href="login.html"><i class="fas fa-user"></i> Đăng nhập</a>
-                </div>
-                <div class="header-cart">
-                    <a href="#"><i class="fas fa-shopping-cart"></i> <span>Giỏ hàng</span></a>
-                </div>
-            </div>
-        </div>
-        <nav class="header-nav">
-            <div class="container">
-                <ul class="nav-list">
-                    <li><a href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
-                    <li><a href="#promo"><i class="fas fa-tags"></i> Khuyến mãi</a></li>
-                    <li><a href="#news"><i class="fas fa-newspaper"></i> Tin tức</a></li>
-                    <li><a href="Thao Vy Store System.html"><i class="fas fa-store"></i> Hệ thống cửa hàng</a></li>
-                    <li><a href="#support"><i class="fas fa-question-circle"></i> Hỗ trợ</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Giỏ hàng -->
-    <main class="cart-container container">
+    <div class="cart-container">
         <h1>Giỏ hàng của bạn</h1>
+
+        <!-- Nội dung giỏ hàng -->
         <div class="cart-content">
             <!-- Danh sách sản phẩm -->
             <div class="cart-items">
+                <div class="cart-header">
+                    <div>Sản phẩm</div>
+                    <div>Tên sản phẩm</div>
+                    <div>Giá</div>
+                    <div>Số lượng</div>
+                    <div>Tổng</div>
+                    <div>Thao tác</div>
+                </div>
                 <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
             </div>
 
             <!-- Thanh toán -->
             <div class="cart-summary">
+                <h2>Thanh toán</h2>
                 <div class="summary-row">
-                    <span>Tổng tiền:</span>
+                    <span>Tạm tính:</span>
                     <span id="subtotal">0 VND</span>
                 </div>
                 <div class="summary-row">
@@ -69,7 +42,7 @@
                     <span id="total">0 VND</span>
                 </div>
 
-                <!-- Mục nhập voucher -->
+                <!-- Nhập mã voucher -->
                 <div class="voucher">
                     <input type="text" id="voucher-code" placeholder="Nhập mã voucher">
                     <button id="apply-voucher">Áp dụng</button>
@@ -89,7 +62,7 @@
                     <h4>Voucher không khả dụng</h4>
                     <ul class="unavailable-vouchers">
                         <li>SALE50 - Hết hạn</li>
-                        <li>NEWYEAR - Chỉ áp dụng cho đơn hàng trên 5,000,000 VND</li>
+                        <li>NEWYEAR - Không đủ điều kiện</li>
                     </ul>
                 </div>
 
@@ -106,52 +79,42 @@
                         <input type="radio" name="payment-method" value="cash-on-delivery"> Thanh toán khi nhận hàng
                     </label>
                 </div>
-            </div>
-        </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-top">
-            <div class="footer-col">
-                <h4>Thông tin</h4>
-                <ul>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Hệ thống cửa hàng</a></li>
-                    <li><a href="#">Tuyển dụng</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Chính sách</h4>
-                <ul>
-                    <li><a href="#">Bảo hành đổi trả</a></li>
-                    <li><a href="#">Thanh toán & giao hàng</a></li>
-                    <li><a href="#">Bảo mật thông tin</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Hỗ trợ khách hàng</h4>
-                <ul>
-                    <li><a href="#">Liên hệ</a></li>
-                    <li><a href="#">Câu hỏi thường gặp</a></li>
-                    <li><a href="#">Hướng dẫn mua hàng</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Kết nối</h4>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                <!-- Form nhập thông tin thẻ tín dụng -->
+                <div id="credit-card-form" class="hidden">
+                    <h4>Thông tin thẻ tín dụng</h4>
+                    <label for="card-number">Số thẻ:</label>
+                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456"><br>
+                    <label for="card-holder">Tên chủ thẻ:</label>
+                    <input type="text" id="card-holder" placeholder="Nguyễn Văn A"><br>
+                    <label for="expiry-date">Ngày hết hạn:</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY"><br>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="123"><br>
+                </div>
+
+                <!-- Form liên kết ngân hàng -->
+                <div id="bank-transfer-form" class="hidden">
+                    <h4>Thông tin chuyển khoản</h4>
+                    <label for="bank-list">Ngân hàng:</label>
+                    <select id="bank-list">
+                        <option value="">Chọn ngân hàng</option>
+                        <option value="vietcombank">Vietcombank</option>
+                        <option value="techcombank">Techcombank</option>
+                        <option value="vpbank">VPBank</option>
+                        <option value="acb">ACB</option>
+                    </select><br>
+                    <label for="account-number">Số tài khoản:</label>
+                    <input type="text" id="account-number" placeholder="123456789"><br>
+                </div>
+
+                <!-- Nút Mua hàng -->
+                <div class="checkout-button">
+                    <button id="checkout" class="btn-buy">Mua hàng</button>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            &copy; 2025 Thảo Vy Store. All rights reserved.
-        </div>
-    </footer>
-
+    </div>
     <script src="Gio Hang.js"></script>
 </body>
 </html>

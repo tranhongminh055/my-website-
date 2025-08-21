@@ -512,10 +512,6 @@ footer {
     padding-bottom: 0;
 }
 
-.item-select input {
-    margin-right: 10px;
-}
-
 .item-image img {
     width: 80px;
     height: 80px;
@@ -536,58 +532,6 @@ footer {
     color: var(--red);
     font-weight: bold;
     text-align: center;
-}
-
-.quantity-control {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.quantity-control button {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border: 1px solid var(--border);
-    background: var(--light);
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--dark);
-    border-radius: var(--radius);
-    transition: background 0.3s ease;
-}
-
-.quantity-control button:hover {
-    background: #f0f0f0;
-}
-
-.quantity-control input {
-    width: 50px;
-    text-align: center;
-    margin: 0 10px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 5px;
-    font-size: 14px;
-}
-
-.item-remove button {
-    background: var(--red);
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: var(--radius);
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: background 0.3s ease;
-}
-
-.item-remove button:hover {
-    background: #a80013;
 }
 
 /* Thanh toán */
@@ -613,51 +557,61 @@ footer {
     color: var(--red);
 }
 
-.voucher {
-    margin: 15px 0;
-    display: flex;
-    gap: 10px;
-    align-items: center;
+/* Nút Mua hàng */
+.checkout-button {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.voucher input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    font-size: 14px;
-}
-
-.voucher button {
-    padding: 10px 20px;
-    background: var(--red);
+.btn-buy {
+    background-color: #ff5722;
     color: #fff;
+    padding: 10px 20px;
     border: none;
-    border-radius: var(--radius);
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.voucher button:hover {
-    background: #a80013;
+.btn-buy:hover {
+    background-color: #e64a19;
 }
 
-.toggle-voucher {
-    background: var(--light);
-    color: var(--dark);
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-control input {
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
     border: 1px solid var(--border);
-    padding: 10px;
     border-radius: var(--radius);
-    cursor: pointer;
+    padding: 5px;
     font-size: 14px;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid var(--border);
+    background: var(--light);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--dark);
+    border-radius: var(--radius);
     transition: background 0.3s ease;
 }
 
-.toggle-voucher:hover {
-    background: #f0f0f0;
+.quantity-control button:hover {
+    background: #e9ecef;
 }
-
 .voucher-list {
     margin-top: 15px;
     padding: 15px;
@@ -693,7 +647,7 @@ footer {
 }
 
 .voucher-list ul li:hover {
-    background: #f0f0f0;
+    background: #e9ecef;
     color: var(--dark);
 }
 

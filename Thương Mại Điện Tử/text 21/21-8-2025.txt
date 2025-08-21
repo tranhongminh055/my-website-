@@ -1,0 +1,22 @@
+9.
+
+- padding không nhận giá trị âm không dịch chuyển được block 
+- margin có thể nhận giá trị âm và dương và dịch chuyển theo block
+
+* ví dụ:
+
+.block1{
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    margin-left: 100px;
+    border: 2px solid black; 
+}
+
+.block2{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(221, 156, 185);
+    padding-left: 100px;
+    border: 2px solid black;
+}
