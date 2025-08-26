@@ -31,29 +31,22 @@ document.querySelectorAll('.toggle-password').forEach((toggle) => {
   });
 });
 
-document.querySelector('form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Ngăn form gửi đi và reload trang
+// Xử lý sự kiện form đăng nhập
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const usernameInput = document.getElementById('username').value;
+  const passwordInput = document.getElementById('password').value;
 
-  // Lấy giá trị từ các trường nhập liệu
-  const username = document.getElementById('username').value.trim();
-  const password = document.getElementById('password').value.trim();
-
-  // Kiểm tra nếu bỏ trống
-  if (!username || !password) {
-    alert('Vui lòng nhập đầy đủ thông tin!');
-    return;
-  }
-
-  // Lấy thông tin người dùng từ LocalStorage
-  const user = JSON.parse(localStorage.getItem('user'));
+  // Lấy thông tin từ localStorage
+  const storedUsername = localStorage.getItem('username');
+  const storedPassword = localStorage.getItem('password');
 
   // Kiểm tra thông tin đăng nhập
-  if (!user || user.username !== username || user.password !== password) {
+  if (usernameInput === storedUsername && passwordInput === storedPassword) {
+    alert('Đăng nhập thành công!');
+    // Chuyển hướng đến trang chính (ví dụ: index.html)
+    window.location.href = 'index.html';
+  } else {
     alert('Tên đăng nhập hoặc mật khẩu không đúng!');
-    return;
   }
-
-  // Nếu thông tin hợp lệ, chuyển hướng đến trang chủ
-  alert('Đăng nhập thành công!');
-  window.location.href = 'index.html'; // Chuyển hướng sang trang chủ
 });

@@ -1,0 +1,223 @@
+.container{
+    display: flex;
+    height: 600px;
+    width: 800px;
+    background-color: antiquewhite;
+}
+.left{
+    height: 100%;
+    width: 30%;
+    background-color:#dc3545;
+}
+.right{
+    height: 100%;
+    width: 70%;
+    background-color: rgb(14, 9, 67);
+}
+.left_img img{
+    width: 90%;
+    height: 30%;
+    border: 2px solid white;
+    margin: 5px 10px;
+}
+.left_content a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.left_content span{
+    color: rgb(211, 204, 204);
+}
+.left_content p{
+    color: rgb(211, 204, 204);
+}
+.left_content{
+    padding: 15px;
+    font-size: 13px;
+}
+.block1{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-bottom: 1px solid red;
+}
+.block1_img img{
+    width: 100%;
+    height: 80%;
+    border: 5px solid white;
+    margin: 5px 10px;
+}
+.block1_content{
+    padding-left: 25px; 
+    margin-top: 7px;
+}
+.block1_content a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.block1_content span{
+    font-size: 13px;
+}
+.block1_content a:hover{
+    text-decoration: underline;
+}
+.block1_content span, .block1_content p {
+    color: rgb(211, 204, 204);
+}
+/* BLOCK 2 */
+.block2{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-bottom: 1px solid red;
+}
+.block2_img img{
+    width: 100%;
+    height: 80%;
+    border: 5px solid white;
+    margin: 5px 10px;
+}
+.block2_content{
+    padding-left: 25px; 
+    margin-top: 7px;
+}
+.block2_content a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.block2_content span{
+    font-size: 13px;
+}
+.block2_content a:hover{
+    text-decoration: underline;
+}
+.block2_content span, .block2_content p {
+    color: rgb(211, 204, 204);
+}
+/* BLOCK 3 */
+.block3{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-bottom: 1px solid red;
+}
+.block3_img img{
+    width: 100%;
+    height: 80%;
+    border: 5px solid white;
+    margin: 5px 10px;
+}
+.block3_content{
+    padding-left: 25px; 
+    margin-top: 7px;
+}
+.block3_content a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.block3_content span{
+    font-size: 13px;
+}
+.block3_content a:hover{
+    text-decoration: underline;
+}
+.block3_content span, .block3_content p {
+    color: rgb(211, 204, 204);
+}
+/* BLOCK 4 */
+.block4{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-bottom: 1px solid red;
+}
+.block4_img img{
+    width: 100%;
+    height: 80%;
+    border: 5px solid white;
+    margin: 5px 10px;
+}
+.block4_content{
+    padding-left: 25px; 
+    margin-top: 7px;
+}
+.block4_content a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.block4_content span{
+    font-size: 13px;
+}
+.block4_content a:hover{
+    text-decoration: underline;
+}
+.block4_content span, .block4_content p {
+    color: rgb(211, 204, 204);
+}
+/* BLOCK 5 */
+.block5{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-bottom: 1px solid red;
+}
+.block5_img img{
+    width: 100%;
+    height: 80%;
+    border: 5px solid white;
+    margin: 5px 10px;
+}
+.block5_content{
+    padding-left: 25px; 
+    margin-top: 7px;
+}
+.block5_content a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.block5_content span{
+    font-size: 13px;
+}
+.block5_content a:hover{
+    text-decoration: underline;
+}
+.block5_content span, .block5_content p {
+    color: rgb(211, 204, 204);
+}
+/* BLOCK 6 */
+.block6{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    /* border-bottom: 1px solid red; */
+}
+.block6_img img{
+    width: 90%;
+    height: 80%;
+    border: 5px solid white;
+    margin: 5px 10px;
+}
+.block6_content{
+    padding-left: 10px; 
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+.block6_content a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.block6_content span{
+    font-size: 13px;
+}
+.block6_content a:hover{
+    text-decoration: underline;
+}
+.block6_content span, .block6_content p {
+    color: rgb(211, 204, 204);
+}

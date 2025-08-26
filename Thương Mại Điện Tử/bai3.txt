@@ -1,0 +1,20 @@
+. container
+-> 4 block
+-----------
+
+trong mỗi block chứa:
+
+1. button
+2. a -> img
+3. a
+4. span
+5. a -> icon
+6. hr
+7. a -> ul li
+HD: 
+
+Đào tạo
+chèn icon
+tạo nét đứt 
+chia vị trí 
+

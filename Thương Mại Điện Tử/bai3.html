@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trang Tin – Demo Duy Tân</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --red:#c61a1a;          
+      --red-dark:#a11212;
+      --text:#222;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f6f7fb;
+      --shadow:0 6px 20px rgba(0,0,0,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:var(--bg);
+    }
+    .container{
+      width:min(1200px,92vw);
+      margin:28px auto 80px;
+    }
+
+    
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:28px;
+    }
+    @media (max-width:1100px){
+      .grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (max-width:900px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:620px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    
+    .section{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    
+    .badge{
+      align-self:flex-start;
+      background:var(--red);
+      color:#fff;
+      font-weight:800;
+      letter-spacing:.5px;
+      padding:10px 14px;
+      border-radius:10px;
+      box-shadow:var(--shadow);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      cursor:pointer;
+      border:none;
+      user-select:none;
+      transition:transform .08s ease, background .2s ease;
+    }
+    .badge:active{ transform:translateY(1px) }
+    .badge:hover{ background:var(--red-dark) }
+    .badge .dot{
+      width:10px;height:10px;border-radius:50%;background:#fff;opacity:.85
+    }
+    
+    
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .thumb{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      display:block;
+    }
+    .content{ padding:14px 16px 10px }
+    .title{
+      font-weight:700;line-height:1.35;margin:0 0 6px;font-size:16px
+    }
+    .meta{
+      display:flex; align-items:center; gap:14px;
+      font-size:12px; color:var(--muted);
+    }
+    .meta i{opacity:.9}
+    .divider{ height:1px; background:#eceff4; margin:12px 0 }
+
+    
+    .bullets{
+      list-style:none; padding:0 16px 14px; margin:0;
+    }
+    .bullets li{ 
+      position:relative; padding-left:16px; margin:8px 0; line-height:1.4;
+    }
+    .bullets li:before{
+      content:"■"; position:absolute; left:0; top:0; font-size:8px; color:#c9cdd3; line-height:1.6;
+    }
+    .bullets a{ text-decoration:none; color:#334155 }
+    .bullets a:hover{ text-decoration:underline }
+    .actions{
+      display:flex; gap:10px; align-items:center;
+    }
+    .actions a{
+      color:var(--muted); text-decoration:none; font-size:13px;
+      display:inline-flex; gap:6px; align-items:center;
+    }
+    .actions a:hover{ color:#111 }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid">
+
+      
+      <section class="section" data-section="daotao">
+        <button class="badge"><span class="dot"></span> ĐÀO TẠO</button>
+
+        <article class="card">
+          <img class="thumb" src="https://picsum.photos/seed/edu/640/360" alt="">
+          <div class="content">
+            <h3 class="title">SV ngành Hàng không Duy Tân: Nhiều cơ hội thực tập, …</h3>
+            <div class="meta">
+              <span><i class="fa-regular fa-calendar"></i> 07/08/2025</span>
+              <div class="actions">
+                <a href="#"><i class="fa-regular fa-comment"></i> 5</a>
+                <a href="#"><i class="fa-solid fa-share-from-square"></i> Chia sẻ</a>
+              </div>
+            </div>
+            <div class="divider"></div>
+          </div>
+          <ul class="bullets">
+            <li><a href="#">ĐH Duy Tân đào tạo từ 4-7 tín chỉ AI và Khởi nghiệp cho tất cả sinh viên</a></li>
+            <li><a href="#">Quy hoạch 4 Trung tâm Giáo dục Đại học lớn của cả nước với 7 Đại học làm nòng cốt</a></li>
+          </ul>
+        </article>
+      </section>
+
+      
+      <section class="section" data-section="nghiencuu">
+        <button class="badge"><span class="dot"></span> NGHIÊN CỨU</button>
+
+        <article class="card">
+          <img class="thumb" src="https://picsum.photos/seed/research/640/360" alt="">
+          <div class="content">
+            <h3 class="title">Các nhà khoa học từ Harvard, Cornell và Connecticut …</h3>
+            <div class="meta">
+              <span><i class="fa-regular fa-calendar"></i> 07/08/2025</span>
+              <div class="actions">
+                <a href="#"><i class="fa-regular fa-comment"></i> 12</a>
+                <a href="#"><i class="fa-solid fa-share-from-square"></i> Chia sẻ</a>
+              </div>
+            </div>
+            <div class="divider"></div>
+          </div>
+          <ul class="bullets">
+            <li><a href="#">ĐH Duy Tân đăng cai Hội thảo APacCHRIE 2028</a></li>
+            <li><a href="#">3 nhà khoa học ĐH Duy Tân trúng Quỹ NAFOSTED</a></li>
+          </ul>
+        </article>
+      </section>
+
+      
+      <section class="section" data-section="hoptac">
+        <button class="badge"><span class="dot"></span> HỢP TÁC</button>
+
+        <article class="card">
+          <img class="thumb" src="https://picsum.photos/seed/partner/640/360" alt="">
+          <div class="content">
+            <h3 class="title">ĐH Duy Tân ký kết Thỏa thuận Hợp tác với Viện Hàn lâm …</h3>
+            <div class="meta">
+              <span><i class="fa-regular fa-calendar"></i> 19/07/2025</span>
+              <div class="actions">
+                <a href="#"><i class="fa-regular fa-comment"></i> 9</a>
+                <a href="#"><i class="fa-solid fa-share-from-square"></i> Chia sẻ</a>
+              </div>
+            </div>
+            <div class="divider"></div>
+          </div>
+          <ul class="bullets">
+            <li><a href="#">Hội nghị Bàn tròn Du lịch ASEAN – Hàn Quốc</a></li>
+            <li><a href="#">Hội thảo Chunbuk (Hàn Quốc) thành lập trung tâm đào tạo CBNV</a></li>
+          </ul>
+        </article>
+      </section>
+
+      
+      <section class="section" data-section="hoatdong">
+        <button class="badge"><span class="dot"></span> HOẠT ĐỘNG</button>
+
+        <article class="card">
+          <img class="thumb" src="https://picsum.photos/seed/activity/640/360" alt="">
+          <div class="content">
+            <h3 class="title">Nấc Thang Xanh 2025 – Hành trình của thanh xuân rực rỡ</h3>
+            <div class="meta">
+              <span><i class="fa-regular fa-calendar"></i> 07/08/2025</span>
+              <div class="actions">
+                <a href="#"><i class="fa-regular fa-comment"></i> 3</a>
+                <a href="#"><i class="fa-solid fa-share-from-square"></i> Chia sẻ</a>
+              </div>
+            </div>
+            <div class="divider"></div>
+          </div>
+          <ul class="bullets">
+            <li><a href="#">Triển lãm bộ sưu tập côn trùng quý hiếm bậc nhất Việt Nam</a></li>
+            <li><a href="#">Một mùa sôi động với Hội thao Sinh viên Đại học Duy Tân 2025</a></li>
+          </ul>
+        </article>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    
+    document.querySelectorAll('.badge').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const name = btn.textContent.trim();
+        
+        btn.animate([{transform:'scale(1)'},{transform:'scale(.98)'},{transform:'scale(1)'}],
+                    {duration:140,iterations:1,easing:'ease-out'});
+        
+        btn.closest('.section').scrollIntoView({behavior:'smooth', block:'start'});
+        
+        console.log('Đã bấm:', name);
+      });
+    });
+  </script>
+</body>
+</html>
