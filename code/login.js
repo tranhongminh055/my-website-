@@ -13,22 +13,19 @@ document.getElementById('zalo-login').addEventListener('click', function () {
 });
 
 // Xử lý hiển thị/ẩn mật khẩu
-document.querySelectorAll('.toggle-password').forEach((toggle) => {
-  toggle.addEventListener('click', function () {
-    const targetId = this.getAttribute('data-target');
-    const passwordField = document.getElementById(targetId);
+document.getElementById('toggle-password').addEventListener('click', function() {
+  const passwordInput = document.getElementById('password');
+  const icon = this;
 
-    // Kiểm tra trạng thái hiện tại và thay đổi
-    if (passwordField.type === 'password') {
-      passwordField.type = 'text';
-      this.classList.remove('fa-eye');
-      this.classList.add('fa-eye-slash');
-    } else {
-      passwordField.type = 'password';
-      this.classList.remove('fa-eye-slash');
-      this.classList.add('fa-eye');
-    }
-  });
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    icon.classList.remove('fa-eye');
+    icon.classList.add('fa-eye-slash');
+  } else {
+    passwordInput.type = 'password';
+    icon.classList.remove('fa-eye-slash');
+    icon.classList.add('fa-eye');
+  }
 });
 
 // Xử lý sự kiện form đăng nhập

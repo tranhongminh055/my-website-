@@ -165,13 +165,18 @@ header {
     margin-bottom: 18px;
 }
 .product-card {
-    background: #fff;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 14px;
-    text-align: center;
-    transition: box-shadow 0.2s;
-    position: relative;
+  border: 3px solid #ddd; /* Đường viền đậm hơn */
+  border-radius: 15px; /* Bo góc lớn hơn */
+  padding: 25px; /* Tăng khoảng cách bên trong thẻ */
+  margin: 15px; /* Tăng khoảng cách giữa các thẻ */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà */
+  background-color: #fff; /* Màu nền trắng để nổi bật */
+}
+.product-card:hover {
+  border-color: #007bff; /* Đổi màu viền khi hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng */
+  transform: scale(1.05); /* Phóng to thẻ một chút */
 }
 .product-card img {
     width: 100%;
@@ -181,9 +186,14 @@ header {
     object-fit: cover;
 }
 .product-card h3 {
-    color: var(--dark);
-    font-size: 1.1rem;
-    margin-bottom: 6px;
+    margin: 0 0 15px;
+    font-size: 20px; /* Tăng kích thước tiêu đề */
+    color: #333;
+}
+.product-card p {
+  font-size: 16px; /* Tăng kích thước văn bản */
+  color: #666;
+  margin-bottom: 20px;
 }
 .product-card .price {
     color: var(--red);
@@ -205,6 +215,19 @@ header {
 }
 .product-card button:hover {
     background: #a80013;
+}
+.product-card .read-more {
+  text-align: center;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Tăng kích thước chữ trong nút */
+}
+.product-card .read-more:hover {
+  background-color: #0056b3; /* Đổi màu nút khi hover */
 }
 .promo-content {
     display: flex;
@@ -501,4 +524,41 @@ footer {
         transform: translate(calc(100vw - 50px), -50px);
         opacity: 0;
     }
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Căn sang phải */
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+header nav ul li a img.user-icon {
+  width: 30px; /* Kích thước icon */
+  height: 30px;
+  border-radius: 50%; /* Bo tròn icon */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+}
+
+/* Định dạng cho icon tài khoản */
+.user-icon {
+  width: 60px; /* Kích thước chiều rộng */
+  height: 60px; /* Kích thước chiều cao */
+  border-radius: 50%; /* Bo tròn hình ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  border: 2px solid #ddd; /* Viền xung quanh (tùy chọn) */
+  cursor: pointer; /* Thêm hiệu ứng con trỏ */
+}
+
+.user-icon:hover {
+  border-color: #007bff; /* Đổi màu viền khi hover */
 }

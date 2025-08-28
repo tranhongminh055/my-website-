@@ -63,7 +63,7 @@ body {
   padding-right: 40px; /* Chừa khoảng trống cho icon */
 }
 
-.password-wrapper .toggle-password {
+.password-wrapper i {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -72,7 +72,7 @@ body {
   color: #888;
 }
 
-.password-wrapper .toggle-password:hover {
+.password-wrapper i:hover {
   color: #333;
 }
 
