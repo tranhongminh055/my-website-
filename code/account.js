@@ -6,7 +6,7 @@ const modalForm = document.getElementById('modal-form');
 const closeModal = document.getElementById('close-modal');
 
 // Các phần tử thông tin
-const userName = document.getElementById('user-name');
+const userName = document.getElementById('no-update');
 const userEmail = document.getElementById('user-email');
 const userPhone = document.getElementById('user-phone');
 const bankName = document.getElementById('bank-name');
@@ -40,6 +40,17 @@ modalForm.addEventListener('submit', function (event) {
 
   if (currentEditField) {
     currentEditField.textContent = newValue;
+
+    // Cập nhật thông tin trong localStorage
+    const userInfo = JSON.parse(localStorage.getItem("userInfo")) || {};
+    if (currentEditField === userName) userInfo.name = newValue;
+    if (currentEditField === userEmail) userInfo.email = newValue;
+    if (currentEditField === userPhone) userInfo.phone = newValue;
+    if (currentEditField === bankName) userInfo.bankName = newValue;
+    if (currentEditField === bankAccount) userInfo.bankAccount = newValue;
+    if (currentEditField === shippingAddress) userInfo.shippingAddress = newValue;
+
+    localStorage.setItem("userInfo", JSON.stringify(userInfo));
   }
 
   closeModalHandler();
@@ -64,4 +75,18 @@ editBankInfo.addEventListener('click', function () {
 editShippingInfo.addEventListener('click', function () {
   currentEditField = shippingAddress;
   openModal('Thay đổi địa chỉ giao hàng', shippingAddress.textContent);
+});
+
+// Tự động cập nhật thông tin từ localStorage khi tải trang
+document.addEventListener('DOMContentLoaded', function () {
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+  if (userInfo) {
+    userName.textContent = userInfo.name || "Chưa cập nhật";
+    userEmail.textContent = userInfo.email || "Chưa cập nhật";
+    userPhone.textContent = userInfo.phone || "Chưa cập nhật";
+    bankName.textContent = userInfo.bankName || "Chưa cập nhật";
+    bankAccount.textContent = userInfo.bankAccount || "Chưa cập nhật";
+    shippingAddress.textContent = userInfo.shippingAddress || "Chưa cập nhật";
+  }
 });

@@ -61,5 +61,14 @@
   </div>
 
   <script src="hoadonxacnhan.js"></script>
+  <script>
+    function goBack() {
+      // Xóa dữ liệu giỏ hàng trong localStorage
+      localStorage.removeItem('cart'); // 'cart' là key lưu trữ giỏ hàng
+
+      // Chuyển hướng về trang chủ
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
